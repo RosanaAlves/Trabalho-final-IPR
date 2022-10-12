@@ -1,0 +1,52 @@
+Dados de clima
+Metadatos da estação meteorológica de três aeroportos de Nova Iorque LGA, JFK e EWR
+
+clima
+Format
+Um data.frame com 26.115 linhas e 15 colunas
+
+origem
+Estação meteorológica. Coluna origem pode ser usada para juntar com os dados dados::voos
+
+ano
+Ano do registro
+
+mes
+Mês do registro
+
+dia
+Dia do registro
+
+hora
+Hora do registro
+
+temperatura
+Temperatura média em graus Farenheint
+
+ponto_condensacao
+Ponto de condensação, isto é, temperatura (em Farenheits) na qual o vapor d'água se condensa
+
+umidade
+Umidade relativa
+
+direcao_vento
+Direção do vento em graus
+
+velocidade_vento
+Velocidade do vento medida em milhas por hora
+
+velocidade_rajada
+Velocidade da rajada de vento medida em milhas por hora
+
+precipitacao
+Precipitação da chuva medida em polegadas
+
+pressao
+Pressão atmosférica ao nível do mar em milibares
+
+visibilidade
+Visibilidade média em milhas
+
+data_hora
+Data e hora de registro em formato POSIXct
+

@@ -24,8 +24,7 @@ View(dados)
 # -------------------------------------------------------------------------
 
 
-# Limpando os dados -------------------------------------------------------
-
+# Analise descritiva de dados -------------------------------------------------------
 
 unique(dados$origem)
 
@@ -55,13 +54,44 @@ dados = dados[,-2]
 # -------------------------------------------------------------------------
 
 
-
-
-
 # Consultas
 
-# Usando a base de clima, e considerando que as colunas "dia", "mes" e "ano"
-# compõem a data de registro do clima, escreva um código que devolva apenas os dados do dia 04/02/2013:
+# Verificando apenas os dados do dia 04/02/2013:
 
 data <- dados[dados$dia == 4 & dados$mes == 2,]
 data[data$origem == "EWR" & data$ponto_condensacao > 10,]
+
+
+
+# Classificando os periodos do dia ----------------------------------------
+periodo <- NULL
+for(i in 1:length(dados$hora)){
+  if(dados$hora[i] >= 0 & dados$hora[i] <6){
+    periodo[i] = "Madrugada"
+  } else if(dados$hora[i] >= 6 & dados$hora[i] <12){
+    periodo[i] = "Manhã"
+  } else if(dados$hora[i] >= 12 & dados$hora[i] <18){
+    periodo[i] = "Tarde"
+  }else {periodo[i] = "Noite"}
+}
+
+unique(periodo)
+table(periodo)
+
+dados <- data.frame(dados,periodo)
+
+# Eu posso verificar qual foi a maior temperatura no periodo da manha do dia 04/02
+
+
+data <- dados[dados$dia == 4 & dados$mes == 2,]
+manha <- data[data$periodo == 'Manhã',]
+max(manha$temperatura)
+mean(manha$ponto_condensacao)
+table(manha$origem)
+min(manha$umidade)
+
+
+# -------------------------------------------------------------------------
+
+
+

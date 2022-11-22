@@ -1,5 +1,4 @@
-1 limpar os dados
-verificar os Nas
- verifcar o ponto  maximo de condesação e quais são as suas origens
- classificar a tempertura: em alta, baixa e média
- verificar a pressao media por local de origem
+Os dados utilizados para este estudo foram retirados do pacote nycflights13, são dados de clima coletados da estação meteorológica de três aeroportos de Nova Iorque LGA, JFK e EWR no ano de 2013.  Temos as seguintes variáveis: origem, ano, mes, dia, hora, temperatura, ponto_condensacao, umidade, direcao_vento, velocidade_vento, velocidade_rajada, precipitacao,  pressao, visibilidade, data_hora.
+O presente trabalho traz uma pequena amostra do que foi visto durante o curso. Foram realizados alguns filtros para verificar a temperatura média por aeroporto durante o ano.
+Analisando o mês de março, foi possível verificar quantas medições acima da média, os  aeroportos tiveram no ponto de condensação.
+A variável hora permitiu fazer a classificação dos dias em períodos, como: manhã, tarde e a noite, realizando um laço de repetição com operadores lógicos.
